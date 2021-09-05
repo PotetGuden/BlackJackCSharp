@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "d0c1eXeITHTnTbc7U4y9UfgHpNJoUGW5/CHrC9i8khw8VC5CbUsExJwEB1LtTx/piF9BeG9lxHq7MyxyZpAVUw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Joste\\source\\repos\\BlackJackCSharp\\BlackJackCSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
