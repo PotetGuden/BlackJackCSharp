@@ -4,32 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJackCSharp
-{
-    class Player
-    {
+namespace BlackJackCSharp {
+    public class Player {
         private List<KeyValuePair<Cards, CardType>> holdingCards = new List<KeyValuePair<Cards, CardType>>();
-        int sumCards = 0;
-        public void AddACard(KeyValuePair<Cards, CardType> cards)
-        {
+        private int sumCards = 0;
+        public void AddACard(KeyValuePair<Cards, CardType> cards) {
             holdingCards.Add(cards);
         }
-        public void InitialDraw() {
+        public void InitialDraw(int n) {
             SumCards();
-            Console.WriteLine("Your initial draw is \"{0} of {1}\" and \"{2} of {3}\". Your current SOFT total is {4}", holdingCards[0].Key, holdingCards[0].Value, holdingCards[1].Key, holdingCards[1].Value, sumCards);
-            Console.Write("Would you like to hit or stay? (h/s) ");
+            Console.WriteLine("Player {5} initial draw is \"{0} of {1}\" and \"{2} of {3}\". Your current SOFT total is {4}", holdingCards[0].Key, holdingCards[0].Value, holdingCards[1].Key, holdingCards[1].Value, sumCards, n);
         }
 
         private void SumCards() {
             sumCards = 0;
             for (int i = 0; i < holdingCards.Count; i++) {
-                sumCards += Deck.CardNumberConverter(holdingCards[i].Key);
+                sumCards += (int)holdingCards[i].Key;
             }
         }
         public void GetHoldingCards(){
             SumCards();
             Console.WriteLine("\nYou pulled \"{0} of {1}\" from the deck. Your current total is {2}", holdingCards[holdingCards.Count-1].Key, holdingCards[holdingCards.Count - 1].Value, sumCards);
-            Console.Write("Would you like to hit or stay? (y/n)");
         }
 
         public void Reset()

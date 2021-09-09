@@ -4,24 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackJackCSharp
-{
-    class Dealer
-    {
-        private List<KeyValuePair<Cards, CardType>> holdingCards = new List<KeyValuePair<Cards, CardType>>();
+namespace BlackJackCSharp {
+    class Dealer {
+        private List<KeyValuePair<Cards, CardType>> holdingCards = new();
         int sumCards = 0;
         public void AddACard(KeyValuePair<Cards, CardType> cards){
             holdingCards.Add(cards);
         }
 
-        public void GetHoldingCards(){
-            Console.WriteLine("Dealer's first card is {0} of {1}, the other is a secret\n", holdingCards[0].Key, holdingCards[0].Value);
-        }
-
-        public void DealersTurn()
-        {
+        public void DealersTurn() {
             for(int i = 0; i < holdingCards.Count; i++){
-                sumCards += Deck.CardNumberConverter(holdingCards[i].Key);
+                sumCards += (int)holdingCards[i].Key;
             }
             Console.WriteLine("The Dealers sum is: {0}", sumCards);
 
@@ -29,8 +22,8 @@ namespace BlackJackCSharp
             while(sumCards < 17)
             {
                 holdingCards.Add(deck.GetOneCard());
-                sumCards += Deck.CardNumberConverter(holdingCards[holdingCards.Count-1].Key);
-                Console.WriteLine("Dealer picked {0} the sum is now {1}", holdingCards[holdingCards.Count - 1], sumCards);
+                sumCards += (int)holdingCards[holdingCards.Count-1].Key;
+                Console.WriteLine("Dealer picked {0} of {1} the sum is now {2}", holdingCards[holdingCards.Count - 1].Key, holdingCards[holdingCards.Count - 1].Value, sumCards);
             }
 
             Console.WriteLine("Dealer got {0} as a total value", sumCards);

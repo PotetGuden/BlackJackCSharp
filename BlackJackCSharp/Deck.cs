@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 namespace BlackJackCSharp
 {
     public enum Cards{
-        Two,
-        Three,
-        Four,
-        Five,
-        Six,
-        Seven,
-        Eight,
-        Nine,
-        Ten, 
-        Knight,
-        Queen,
-        King,
-        Ace
+        Two = 2,
+        Three = 3,
+        Four = 4,
+        Five = 5,
+        Six = 6,
+        Seven = 7,
+        Eight = 8,
+        Nine = 9,
+        Ten = 10, 
+        Jack = 10,
+        Queen = 10,
+        King = 10,
+        Ace = 11
     }
     public enum CardType{
         Hearts,
@@ -28,7 +28,7 @@ namespace BlackJackCSharp
         Diamonds
     }
     class Deck{
-        private static Cards[] cards = { Cards.Ace, Cards.Two, Cards.Three, Cards.Four, Cards.Five, Cards.Six, Cards.Seven, Cards.Eight, Cards.Nine, Cards.Ten, Cards.Knight, Cards.Queen, Cards.King };
+        private static Cards[] cards = { Cards.Ace, Cards.Two, Cards.Three, Cards.Four, Cards.Five, Cards.Six, Cards.Seven, Cards.Eight, Cards.Nine, Cards.Ten, Cards.Jack, Cards.Queen, Cards.King };
         private static CardType[] cardType = { CardType.Clubs, CardType.Hearts, CardType.Diamonds, CardType.Spades };
 
         static List<KeyValuePair<Cards, CardType>> deck = new List<KeyValuePair<Cards, CardType>>();
@@ -55,37 +55,5 @@ namespace BlackJackCSharp
                 Console.WriteLine("{0} {1}",deck[i].Key, deck[i].Value);
             }
         }
-        public static int CardNumberConverter(Cards card)
-        {
-            switch (card)
-            {
-                case Cards.Ace:
-                    return 11;
-                case Cards.Two:
-                    return 2;
-                case Cards.Three:
-                    return 3;
-                case Cards.Four:
-                    return 4;
-                case Cards.Five:
-                    return 5;
-                case Cards.Six:
-                    return 6;
-                case Cards.Seven:
-                    return 7;
-                case Cards.Eight:
-                    return 8;
-                case Cards.Nine:
-                    return 9;
-                case Cards.Ten:
-                case Cards.Knight:
-                case Cards.Queen:
-                case Cards.King:
-                    return 10;
-                default: return -1;
-            }
-        }
-
-        
     }
 }

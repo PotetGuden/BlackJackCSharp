@@ -238,21 +238,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Joste\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Joste\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joste\\source\\repos\\BlackJackCSharp\\BlackJackCSharp.csproj",
+      "projectUniqueName": "C:\\Users\\Joste\\RiderProjects\\BlackJackCSharp\\BlackJackCSharp\\BlackJackCSharp.csproj",
       "projectName": "BlackJackCSharp",
-      "projectPath": "C:\\Users\\Joste\\source\\repos\\BlackJackCSharp\\BlackJackCSharp.csproj",
+      "projectPath": "C:\\Users\\Joste\\RiderProjects\\BlackJackCSharp\\BlackJackCSharp\\BlackJackCSharp.csproj",
       "packagesPath": "C:\\Users\\Joste\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joste\\source\\repos\\BlackJackCSharp\\obj\\",
+      "outputPath": "C:\\Users\\Joste\\RiderProjects\\BlackJackCSharp\\BlackJackCSharp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\Joste\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
